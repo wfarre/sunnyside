@@ -1,0 +1,56 @@
+
+
+#description{
+    @include size();
+    @include mobile-size{
+        @include size(110rem, 100%);
+        margin-bottom:2rem;
+        height: fit-content;
+    }
+}
+
+#testimonials{
+    margin-top: 15rem;
+    text-align: center;
+    @include size();
+}
+
+
+#pre-footer{
+    @include size(30rem, 100%);
+    margin-top: 10rem;
+}
+
+#service{
+    height: 30rem;
+    margin-bottom: 5rem;
+    // @include size();
+    @include mobile-size{
+        height: fit-content
+    }
+}
+.serv{
+    @include size(35rem, 50%);
+    text-align: center;
+    @include mobile-size{
+        @include size(35rem, 100%);
+    }
+    &--graphic{
+        @include background-img-properties("../images/desktop/image-graphic-design.jpg");
+        .text{
+            @include text-color($primary-color-graphic);
+        }
+        @include mobile-size{
+            @include background-img-properties("../images/mobile/image-graphic-design.jpg");
+        }
+    }
+    &--photography{
+        @include background-img-properties("../images/desktop/image-photography.jpg");
+        .text{
+            @include text-color($primary-color-photography);
+        }
+        @include mobile-size{
+            @include background-img-properties("../images/mobile/image-photography.jpg");
+        }
+    } 
+}

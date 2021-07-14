@@ -1,0 +1,16 @@
+@mixin text-color($choosencolor) {
+    color: $choosencolor;
+    margin: 0 15%;
+    margin-top:25rem;
+}
+
+@mixin background-img-properties($url) {
+    background-image: url($url);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+@mixin size($height:100%, $width: 100%){
+    height: $height;
+    width: $width;
+}

@@ -1,0 +1,28 @@
+#footer{
+    padding: 5% 10% 0% 5%;
+    background-color: $primary-color-footer-bg;
+    text-align: center;
+    color: $primary-color-footer-text;
+    .logo{
+        transform: scale(1.4);
+        fill:$primary-color-footer-text;
+    }
+    .sns-container{
+        text-align: center;
+        position: relative;
+    }
+    
+    .sns{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 2rem;
+        &:hover .sns--logo{
+            fill: $neutral-header-color;
+        }
+    } 
+    .attribution{
+        position: relative;
+        bottom:0;
+    }
+}

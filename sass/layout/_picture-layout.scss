@@ -1,0 +1,32 @@
+// footer pictures
+.pic{
+    @include size();
+    &--milk{
+        @include background-img-properties("../images/desktop/image-gallery-milkbottles.jpg");
+    }
+    &--orange{
+        @include background-img-properties("../images/desktop/image-gallery-orange.jpg");
+    }
+    &--cone{
+        @include background-img-properties("../images/desktop/image-gallery-cone.jpg");
+    }
+    &--sugar{
+        @include background-img-properties("../images/desktop/image-gallery-sugarcubes.jpg");
+    }
+    @include mobile-size{
+        @include size(50%, 50%);
+        &--milk{
+            @include background-img-properties("../images/mobile/image-gallery-milkbottles.jpg");
+        }
+        &--orange{
+            @include background-img-properties("../images/mobile/image-gallery-orange.jpg");
+        }
+        &--cone{
+            @include background-img-properties("../images/mobile/image-gallery-cone.jpg");
+        }
+        &--sugar{
+            @include background-img-properties("../images/mobile/image-gallery-sugar-cubes.jpg");
+        }
+
+    }
+}

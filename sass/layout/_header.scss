@@ -1,0 +1,18 @@
+#header{
+    @include background-img-properties("../images/desktop/image-header.jpg");
+    padding: 0 5%;
+    height: 55vw;
+    @include mobile-size{
+        @include background-img-properties("../images/mobile/image-header.jpg");
+        height:143vw;
+        background-size: contain;
+    }
+    .arrow{
+        margin-top: 8rem;
+        text-align: center;
+        @include size(2rem, 100%);
+    }
+}
+
+
+

@@ -1,0 +1,11 @@
+@mixin small-desktop(){
+    @media screen and (max-width:959px) {
+        @content;
+    }
+}
+
+@mixin mobile-size(){
+    @media screen and (max-width:572px) {
+        @content;
+    }
+}

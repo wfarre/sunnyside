@@ -1,0 +1,95 @@
+.flex-container{
+    display: flex;
+    justify-content: space-around; 
+    @include mobile-size{
+        flex-wrap: wrap;
+    }
+    &--testimonials{
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+    &--prefooter{
+        @include size();
+    }
+    &--footer{
+        // padding: 0 20%;
+        margin-right: auto;
+        margin-left: auto;
+        width: 30%;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        justify-content: space-around;
+    }
+}
+
+
+
+.grid-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    @include size();
+    @include mobile-size{
+        grid-template-columns: 100%;
+        grid-template-rows: 100vw 30rem 100vw 30rem;
+        text-align: center;
+        align-items: center;
+    }
+    .img{
+        @include size(30rem, 100%);
+        @include mobile-size{
+            @include size(100%, 100%);
+        }
+        &--transform{
+            @include background-img-properties("../images/desktop/image-transform.jpg");
+            grid-area: 1 / 2 / 2 /end ;
+            @include mobile-size{
+                grid-area: 1 / 1 / 2 /end ;
+                @include background-img-properties("../images/mobile/image-transform.jpg");
+                background-size: contain;
+            }
+        }
+        &--standout{
+            @include background-img-properties("../images/desktop/image-stand-out.jpg");
+            grid-area: 2 / 1 / end /2 ;
+            @include mobile-size{
+                grid-area: 3 / 1 / 4 /end ;
+                @include background-img-properties("../images/mobile/image-stand-out.jpg");
+                background-size: contain;
+
+            }
+        }
+
+    }
+    .txt{
+        height: 100%;
+        margin: auto 15%;
+        @include mobile-size{
+            margin: 0 5%;
+        }
+        p{
+            color: $neutral-color-txt;
+            line-height: 2;
+        }
+        &--transform{
+            grid-area: 1 / 1 / 2 /2 ;
+            a{
+                text-decoration-color: $primary-color-transform;
+            }
+            @include mobile-size{
+                grid-area: 2 / 1 / 2 /end ;
+            }
+
+        }
+        &--standout{
+            grid-area: 2 / 2 / end / end ;
+            a{
+                text-decoration-color: $primary-color-standout;
+            }
+            @include mobile-size{
+                grid-area: 4 / 1 / 4 /end ;
+            }
+        }
+    }
+}

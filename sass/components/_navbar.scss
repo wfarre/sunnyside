@@ -1,0 +1,32 @@
+.navbar{
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li{
+            display: inline;
+            color: $neutral-header-color;
+            margin-right: 2rem;
+        }
+    }
+    &__footer{
+        margin-top: 1.5rem;
+        nav{
+            justify-content: center;
+            li{
+                margin-right: 3rem; 
+                @include mobile-size{
+                    margin-right: 1.5rem;
+                } 
+                &:hover a{
+                    color: $neutral-header-color;
+                }
+                a{
+                    color: $primary-color-footer-text;
+                    text-decoration: none;
+                }
+               
+                }
+        }
+    }
+}

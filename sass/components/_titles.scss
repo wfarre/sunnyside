@@ -1,0 +1,37 @@
+.title{
+    font-family: $title-font;
+    &--big{
+        text-transform: uppercase;
+        letter-spacing: .75rem;
+        text-align: center;
+        &--testimonials{
+            color: $neutral-color-title-testimonials;
+            margin-bottom: 8rem;
+            @include mobile-size{
+                font-size: 1.3rem;
+                letter-spacing: 0.25rem;
+            }
+        }
+        &--header{
+            color: $neutral-header-color;
+            font-size: 45px;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+    &--sub{
+        font-size: 3rem;
+        @include small-desktop{
+            font-size: 2rem;
+        }
+        @include mobile-size{
+            font-size: 3rem;
+        }
+    }
+    &--learn{
+        text-transform: uppercase;
+        color:black;
+        text-decoration-thickness: .3rem;
+    }
+    
+}

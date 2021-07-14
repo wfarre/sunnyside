@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    font-size: 18px;
+    font-family: $text-font;
+    @include small-desktop{
+        font-size: 16px;
+    }
+    @include mobile-size{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,29 @@
+.arrow{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 10vmax;
+    text-align: center;
+    @include size(2rem, 100%);
+    animation: arrow-appear 1000ms ease-in-out 500ms backwards;
+    animation: arrow-boeing 800ms linear infinite alternate both;
+}
+
+@keyframes arrow-appear {
+    0%{
+        margin-top: -30rem;
+    }
+    100%{
+        margin-top: 8rem;
+    }
+}
+
+@keyframes arrow-boeing {
+    0%{
+        margin-top: 2rem;
+    }
+    100%{
+        margin-top: 4rem;
+    }
+}

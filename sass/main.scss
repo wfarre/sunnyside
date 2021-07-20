@@ -3,9 +3,12 @@
 @import "./utils/extensions";
 @import "./utils/breakpoints";
 
+@import "./components/underline";
 @import "./components/titles";
 @import "./components/buttons";
 @import "./components/navbar";
+@import "./components/arrow";
+
 
 @import "./base/body";
 @import "./layout/containers";
@@ -15,7 +18,6 @@
 @import "./layout/header";
 
 @import "./pages/sections";
-
 
 
 

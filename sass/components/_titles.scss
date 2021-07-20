@@ -13,10 +13,15 @@
             }
         }
         &--header{
+            animation: title-animation 1300ms 500ms linear backwards ;
+            transform-origin: bottom center;
             color: $neutral-header-color;
             font-size: 45px;
             margin-top: 5rem;
             margin-bottom: 5rem;
+            @include mobile-size{
+                font-size: xx-large;
+            }
         }
     }
     &--sub{
@@ -31,7 +36,40 @@
     &--learn{
         text-transform: uppercase;
         color:black;
-        text-decoration-thickness: .3rem;
+        text-decoration: none;
+        margin: 0;
+        z-index: 1;
+        &:hover + .underline{
+            transform: scaleY(2);
+        }
+        
+        // text-decoration-thickness: .3rem;
+        // &:hover{
+        //     text-decoration-thickness: .4rem;
+        //     text-decoration-line: ;
+        // }
     }
     
+}
+.btn{
+    &:hover + .underline{
+        height: 4rem;
+    } 
+}
+
+
+
+@keyframes title-animation {
+    0%{
+        transform: rotateX(90deg) translateY(-100rem) scale(.1);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(90rem) scale(.1);
+        opacity: 0;
+    }
+    100%{
+        transform: rotateX(-90deg) translateY(10rem) scale(1);
+        
+    }
 }

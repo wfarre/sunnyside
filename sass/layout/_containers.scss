@@ -12,13 +12,15 @@
         @include size();
     }
     &--footer{
-        // padding: 0 20%;
         margin-right: auto;
         margin-left: auto;
-        width: 30%;
+        width: 30vw;
         margin-top: 4rem;
         margin-bottom: 3rem;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        @include mobile-size{
+            justify-content: space-between;
+        }
     }
 }
 

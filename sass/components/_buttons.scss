@@ -1,9 +1,44 @@
 .btn{
+    margin: 0 auto;
     background-color: $neutral-header-color;
     height: 50px;
-    width: 100px;
+    width: 120px;
     border-radius: 3rem;
     text-transform: uppercase;
     font-family:'Fraunces', serif ;
     border:none;
+    position: relative;
+    z-index: 1;
+    @include mobile-size{
+        background-color: $primary-color-transform;
+    }
+    &:hover{
+        cursor: pointer;
+        // background-blend-mode: soft-light;
+        // // opacity: 0.5;
+        color: white;
+        
+        &:after{
+            opacity: 1;
+            transform: scale(1.15);
+            // animation: btn-anm 300ms linear both;
+        }
+    }
+
+    &:after{
+        content: " ";
+        border-radius: 3rem;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(125, 229, 255);
+        color: #fff;
+        opacity: 0;
+        z-index: -1;
+        transition: transform 200ms linear 0s, opacity 100ms linear;
+    }
 }
+
+

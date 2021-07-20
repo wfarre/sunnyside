@@ -7,6 +7,9 @@
     }
     &__img{
         border-radius: 100%;
+        @include mobile-size{
+            width: 6rem;
+        }
     }
     &__position{
         color:$neutral-color-txt;

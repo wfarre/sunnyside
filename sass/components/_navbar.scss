@@ -1,22 +1,91 @@
 .navbar{
+    overflow: hidden;
+    padding-top: 2rem;
     nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .navigator{
+            display: inline;
+            @include mobile-size{
+                display: none; 
+                &.responsive{
+                    display: block;
+                    background-color: white;
+                    transition: all 1500ms;
+                }  
+                .arrow-up {
+                    width: 0;
+                    height: 0;
+                    border-left: 30px solid transparent;
+                    border-bottom: 40px solid white;
+                    position: absolute;
+                    right: 5%;
+                    top: 5.5rem;
+                  } 
+            }
+                   
+        
+        ul{
+            @include mobile-size{
+                position: absolute;
+                right: 5%;
+                top: 15%;
+                margin:0;
+                background-color: white;
+                height: 35%;
+                width: 75%;
+                overflow: hidden;
+            }
+            
+        }
         li{
             display: inline;
-            color: $neutral-header-color;
+            overflow: hidden;
             margin-right: 2rem;
+            a{
+                text-decoration: none;
+                color: $neutral-header-color;
+
+            }
+            @include mobile-size{
+                display:flex;
+                text-align: center;
+                flex-direction: column;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                a{
+                    color: $neutral-color-txt;
+                }
+            }
+            
         }
     }
+        
+    }
     &__footer{
-        margin-top: 1.5rem;
+        margin-top: .6rem;
+        padding-top: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+       
         nav{
             justify-content: center;
+            @include mobile-size{
+                display: block;    
+               ul{
+                   padding: 0;
+                   display: flex;
+                   justify-content: space-between;
+               }
+            }
+            
+            
             li{
+                display: inline;
                 margin-right: 3rem; 
                 @include mobile-size{
-                    margin-right: 1.5rem;
+                    margin-right:0;
                 } 
                 &:hover a{
                     color: $neutral-header-color;
@@ -30,3 +99,33 @@
         }
     }
 }
+
+.hamburger-btn{
+    display: none;
+    @include mobile-size{
+        display: block;
+    }
+    position: absolute;
+    right: 5%;
+}
+
+.line{
+    height: 4px;
+    width: 30px;
+    background-color: white;
+    &--2{
+        margin-top: 6px;
+    }
+    &--3{
+        margin-top: 6px;
+    }
+}
+
+.change{
+    .line{
+        background-color: hsl(202, 100%, 81%);
+    }
+}
+
+
+

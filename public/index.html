@@ -31,17 +31,31 @@
       <div>
         <img src="./images/logo.svg" alt="logo">
       </div>
-      <div>
+      <div class="hamburger-btn">
+        <div class="line line--1"></div>
+        <div class="line line--2"></div>
+        <div class="line line--3"></div>
+
+      </div>
+      <div class="navigator">
       <ul>
-        <li>About</li>
-        <li>Services</li>
-        <li>Projects</li>
+        <li>
+          <a href="#description">About</a>
+          </li>
+        <li>
+          <a href="#service">Services</a>
+          </li>
+        <li>
+          <a href="#testimonials">Projects</a>
+          </li>
         <li>
           <button class="btn btn--contact">
             Contact
+            <div class="btn__bg"></div>
           </button>
           </li>
       </ul>
+      <div class="arrow-up"></div>
     </div>
     </nav>
   </div>
@@ -67,7 +81,16 @@
       Engage your clients through compelling visuals that do most of the marketing for you.
     </p>
     
-   <p><a class="title title--learn" href="">Learn more</a></p>
+   <p>
+     <div>
+      <a class="title title--learn" href="">
+        Learn more
+       </a>
+       <div class="underline underline__transform"></div>
+
+     </div>
+    
+    </p>
   </div>
    
   <div class="img img--standout">
@@ -76,7 +99,22 @@
     <h2 class="title title--sub">Stand out to the right audience</h2>
     <p>  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
     </p>
-    <p><a class="title title--learn" href="">Learn more</a></p>
+    
+    <p>
+      <div>
+        <a class="title title--learn" href="">
+          Learn more
+        </a>
+        <div class="underline underline__standout"></div>
+      </div>
+      
+<!--       
+      <div>
+        <button class="btn"> Hello</button>
+        <div class="underline"></div>
+      </div> -->
+      
+    </p>
   </div>
   </div>
   
@@ -172,15 +210,15 @@
 <div class="navbar navbar__footer">
   <nav>
     <ul>
-      <li><a href="">
+      <li><a href="#description">
         About
       </a>
       </li>
-      <li><a href="">
+      <li><a href="#service">
         Services
       </a>
       </li>
-      <li><a href="">
+      <li><a href="#testimonials">
         Projects
       </a>
         </li>
@@ -233,7 +271,7 @@
   </div>
 </section>
  
-
+<script src="../index.js"></script>
  
 </body>
 </html>

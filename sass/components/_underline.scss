@@ -1,0 +1,25 @@
+.underline{
+    position: relative;
+    // top:50%;
+    // left:50%;
+    // transform: translate(-50%,-50%);
+    z-index: -1;
+    bottom: 0.4rem;
+    width: 133px;
+    height: .4rem;
+    transform-origin: center bottom;
+    transition: transform 400ms;
+    @include small-desktop{
+        width: 120px;
+
+    }
+    @include mobile-size{
+        margin: 0 auto;
+    }
+    &__transform{
+        background-color:$primary-color-transform;
+    }
+    &__standout{
+        background-color:$primary-color-standout;
+    }
+}
